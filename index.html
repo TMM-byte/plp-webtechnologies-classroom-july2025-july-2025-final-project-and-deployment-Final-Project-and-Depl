@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Organic Farms</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header>
+    <nav class="navbar">
+      <h1>Organic Farms</h1>
+      <ul class="nav-links">
+        <li><a href="#" onclick="showSection('home-section')">Home</a></li>
+        <li><a href="#" onclick="showSection('products-section')">Products</a></li>
+        <li><a href="#" onclick="showSection('about-section')">About</a></li>
+        <li><a href="#" onclick="showSection('gallery-section')">Gallery</a></li>
+        <li><a href="#" onclick="showSection('contact-section')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
+    <!-- ========== HOME SECTION ========== -->
+    <section id="home-section">
+      <div id="carousel" class="carousel">
+        <img src="images/hens.jpg" alt="Chicken" class="carousel-img " />
+        <img src="images/staring cow.jpg" alt="Cow" class="carousel-img" />
+        <img src="images/sheep.jpg" alt="Sheep" class="carousel-img" />
+      </div>
+      <div class="hero-text">
+        <h2>Welcome to Organic Farms</h2>
+        <p>Fresh. Natural. Local.</p>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCTS SECTION ========== -->
+    <section id="products-section" style="display: none;">
+      <h2 class="section-title">Our Products</h2>
+
+      <div class="product-toggle">
+        <button onclick="showProductType('animal')" class="toggle-btn active" id="animal-btn">Animal Products</button>
+        <button onclick="showProductType('farm')" class="toggle-btn" id="farm-btn">Farm Produce</button>
+      </div>
+
+      <!-- Animal Products -->
+      <div class="product-grid" id="animal-products">
+        <!-- Chicken -->
+        <div class="product-card"><img src="images/chicken coup.jpg" alt=""><h3>Chicken Meat</h3></div>
+        <div class="product-card"><img src="images/eggs.jpg" alt=""><h3>Eggs</h3></div>
+
+        <!-- Cow -->
+        <div class="product-card"><img src="images/milking.jpg" alt=""><h3>Milk</h3></div>
+        <div class="product-card"><img src="images/cows eating.jpg" alt=""><h3>Beef </h3></div>
+        <div class="product-card"><img src="images/staring cows.jpg" alt=""><h3>Hides & Skins</h3></div>
+
+        <!-- Goat -->
+        <div class="product-card"><img src="images/goat.jpg" alt=""><h3>Goat Meat</h3></div>
+        <div class="product-card"><img src="images/goats.jpg" alt=""><h3>Goat Skins</h3></div>
+
+        <!-- Sheep -->
+        <div class="product-card"><img src="images/sheep.jpg" alt=""><h3>Sheep Meat</h3></div>
+        <div class="product-card"><img src="images/sheep wool.jpg" alt=""><h3>Wool</h3></div>
+      </div>
+
+      <!-- Farm Produce -->
+      <div class="product-grid" id="farm-products" style="display: none;">
+        <div class="product-card"><img src="images/sukuma wiki growth stage.webp" alt=""><h3>Sukuma Wiki</h3></div>
+        <div class="product-card"><img src="images/spinach.webp" alt=""><h3>Spinach</h3></div>
+        <div class="product-card"><img src="images/cabbage.jpg" alt=""><h3>Cabbage</h3></div>
+        <div class="product-card"><img src="images/ripe tomatoes.jpg" alt=""><h3>Tomatoes</h3></div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about-section" style="display: none;">
+      <h2 class="section-title">About Us</h2>
+      <div class="about-content">
+        <img src="images/farm.jpg" alt="Our Farm" class="about-img" />
+        <div class="about-text">
+          <p>
+            Welcome to <strong>Organic Farms</strong> – where tradition meets quality. We provide fresh, locally-sourced animal and farm produce, grown with care.
+          </p>
+          <p>
+            We follow sustainable farming practices to ensure our products are not only delicious but also environmentally responsible.
+            We also aim to slowly scale up our farm incorporating ideas on smart agriculture to best serve your needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GALLERY SECTION ========== -->
+    <section id="gallery-section" style="display: none;">
+      <h2 class="section-title">Our Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/cabbage.jpg" alt="farm produce">
+        <img src="images/cows eating.jpg" alt="grazing">
+        <img src="images/field of sheep.jpg" alt="sheep">
+        <img src="images/hen laying eggs.jpg" alt="hens">
+        <img src="images/hens feeding.jpg" alt="hens eating">
+        <img src="images/ripe tomatoes.jpg" alt="fresh tomatoes">
+        <img src="images/staring cows.jpg" alt="cows">
+        <img src="images/milking.jpg" alt="milking cows">
+        <img src="images/chicken coup.jpg" alt="chicken">
+        <img src="images/goats.jpg" alt="goats">
+        <img src="images/sheep.jpg" alt="sheep">
+
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact-section" style="display: none;">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-wrapper">
+        <form class="contact-form">
+          <label>Name:</label>
+          <input type="text" placeholder="Your Name" required>
+          <label>Email:</label>
+          <input type="email" placeholder="Your Email" required>
+          <label>Message:</label>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="live-chat-box">
+          <h3>Live Chat</h3>
+          <div class="chat-window">
+            <p><strong>Support:</strong> Hi there! How can I help you today?</p>
+          </div>
+          <input type="text" placeholder="Type your message..." enabled>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>&copy; 2025 Organic Farms. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
